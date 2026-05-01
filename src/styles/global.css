@@ -1,0 +1,67 @@
+/* ============================================================
+   styles/global.css — Design tokens & base styles
+   ============================================================ */
+
+:root {
+  --bg: #080810;
+  --surface: #0f0f1a;
+  --surface2: #171726;
+  --border: #252538;
+  --accent: #00e5ff;
+  --accent2: #ff5757;
+  --accent3: #a78bfa;
+  --accent4: #fbbf24;
+  --text: #e2e2f0;
+  --text-dim: #5a5a78;
+  --text-mid: #9898b8;
+
+  /* Bar colors */
+  --bar-default: #1e1e30;
+  --bar-compare: #ff5757;
+  --bar-swap: #00e5ff;
+  --bar-sorted: #a78bfa;
+  --bar-pivot: #fbbf24;
+
+  /* Graph colors */
+  --node-default-fill: #1e1e30;
+  --node-default-stroke: #252538;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+button {
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+select,
+input {
+  font-family: 'JetBrains Mono', monospace;
+}
